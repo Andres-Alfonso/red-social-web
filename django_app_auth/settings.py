@@ -116,9 +116,9 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'auth_test_db',
         'USER': 'root',
-        'PASSWORD': 'Andres 2003#',
-        'HOST': 'localhost',  # O la dirección IP de tu servidor de base de datos
-        'PORT': '3306',       # El puerto por defecto para MySQL
+        'PASSWORD': '',
+        'HOST': 'localhost',  # IP de servidor de base de datos
+        'PORT': '3307',       # El puerto para MySQL
     }
 }
 
@@ -145,9 +145,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es-co'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Bogota'
 
 USE_I18N = True
 
@@ -164,7 +164,7 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-#envio de registro por backend
+# envio de registro por backend
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
 ACCOUNT_LOGOUT_ON_GET = True
