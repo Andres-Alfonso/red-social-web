@@ -1,5 +1,8 @@
 ## Crear maquina virtual
  - python -m venv env
+ 
+    ### instalar dependencias
+    - pip install -r requirements.txt
     ### Iniciar maquina virtual
     - .\env\Scripts\activate
 
