@@ -60,7 +60,13 @@ MIDDLEWARE = [
     'allauth.account.middleware.AccountMiddleware',
 ]
 
+# Permite solicitudes desde tu frontend
+CORS_ALLOWED_ORIGINS = [
+    # URL del frontend
+]
 
+# permitir credenciales (cookies, headers de autorización)
+CORS_ALLOW_CREDENTIALS = True
 
 SOCIALACCOUNT_PROVIDERS = {
     'google': {
