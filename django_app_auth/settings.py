@@ -70,10 +70,10 @@ CORS_ALLOW_CREDENTIALS = True
 
 SOCIALACCOUNT_PROVIDERS = {
     'google': {
-        #'SCOPE': [
-        #        'profile',
-        #        'email',
-        #    ],
+        'SCOPE': [
+                'profile',
+                'email',
+            ],
         'EMAIL_AUTHENTICATION': True,
         'AUTH_PARAMS': {
             'access_type': 'online',
@@ -173,4 +173,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # envio de registro por backend
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_UNIQUE_EMAIL = True
+ACCOUNT_AUTHENTICATION_METHOD = 'email'
 ACCOUNT_LOGOUT_ON_GET = True
+SOCIALACCOUNT_EMAIL_REQUIRED = True
+SOCIALACCOUNT_QUERY_EMAIL = True
+SOCIALACCOUNT_STORE_TOKENS = True
