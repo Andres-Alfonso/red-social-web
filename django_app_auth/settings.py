@@ -63,10 +63,21 @@ MIDDLEWARE = [
 # Permite solicitudes desde tu frontend
 CORS_ALLOWED_ORIGINS = [
     # URL del frontend
+    "http://localhost:3000"
+]
+CSRF_TRUSTED_ORIGINS = [
+    "http://localhost:3000",  # Ajusta esto a la URL de tu frontend
 ]
 
 # permitir credenciales (cookies, headers de autorización)
 CORS_ALLOW_CREDENTIALS = True
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.TokenAuthentication',
+    ],
+}
 
 SOCIALACCOUNT_PROVIDERS = {
     'google': {
@@ -181,3 +192,7 @@ SOCIALACCOUNT_LOGIN_ON_GET = True
 SOCIALACCOUNT_EMAIL_REQUIRED = True
 SOCIALACCOUNT_QUERY_EMAIL = True
 SOCIALACCOUNT_STORE_TOKENS = True
+
+LOGIN_REDIRECT_URL = '/'
+ACCOUNT_LOGIN_ON_EMAIL_CONFIRMATION = True
+ACCOUNT_ADAPTER = 'auth_app.CustomAccountAdapter'
