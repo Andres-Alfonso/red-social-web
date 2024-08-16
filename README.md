@@ -1,10 +1,12 @@
 ## Crear maquina virtual
  - python -m venv env
- 
-    ### instalar dependencias
-    - pip install -r requirements.txt
+
     ### Iniciar maquina virtual
     - .\env\Scripts\activate
+    
+    ### instalar dependencias
+    - pip install -r requirements.txt
+    
 
 ## Migraciones
 python manage.py migrate
