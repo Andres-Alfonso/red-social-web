@@ -72,6 +72,9 @@ CSRF_TRUSTED_ORIGINS = [
 # permitir credenciales (cookies, headers de autorización)
 CORS_ALLOW_CREDENTIALS = True
 
+AUTH_USER_MODEL = 'auth_app.CustomUser'
+ACCOUNT_FORMS = {'signup': 'auth_app.forms.CustomSignupForm'}
+
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework.authentication.SessionAuthentication',
@@ -188,6 +191,8 @@ ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_UNIQUE_EMAIL = True
 ACCOUNT_AUTHENTICATION_METHOD = 'email'
 ACCOUNT_LOGOUT_ON_GET = True
+ACCOUNT_USER_MODEL_USERNAME_FIELD = None
+ACCOUNT_USERNAME_REQUIRED = False
 SOCIALACCOUNT_LOGIN_ON_GET = True
 SOCIALACCOUNT_EMAIL_REQUIRED = True
 SOCIALACCOUNT_QUERY_EMAIL = True
@@ -195,4 +200,4 @@ SOCIALACCOUNT_STORE_TOKENS = True
 
 LOGIN_REDIRECT_URL = '/'
 ACCOUNT_LOGIN_ON_EMAIL_CONFIRMATION = True
-ACCOUNT_ADAPTER = 'auth_app.CustomAccountAdapter'
+# ACCOUNT_ADAPTER = 'auth_app.CustomAccountAdapter'
